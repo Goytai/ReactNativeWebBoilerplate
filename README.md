@@ -167,12 +167,6 @@ When you want to forcefully reload, for example to reset the state of your app, 
 
 You've successfully run and modified your React Native Web Boilerplate! 🚀
 
-### What's Next?
-
-- If you want to add this React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [documentation](https://reactnative.dev/docs/getting-started).
-- To learn more about React Native Web, visit the [official documentation](https://necolas.github.io/react-native-web/).
-
 ## 🔧 Tech Stack
 
 This boilerplate includes:
