@@ -2,6 +2,8 @@
 
 A complete **React Native** boilerplate that runs on **iOS**, **Android**, and **Web**, bootstrapped with [`@react-native-community/cli`](https://github.com/react-native-community/cli) and configured for web using [React Native Web](https://necolas.github.io/react-native-web/) + [Vite](https://vitejs.dev/).
 
+> **Note**: This is a **React Native CLI** project, not an Expo project. It provides full access to native code and modules while maintaining web compatibility.
+
 > **Credits**:
 >
 > - This boilerplate was created following the excellent guide by [@insertish](https://gist.github.com/insertish): [React Native Web + Vite Setup Guide](https://gist.github.com/insertish/9cca9b6aa75a7cf34d050368d067ecf5)
@@ -36,7 +38,7 @@ ReactNativeWebBoilerplate/
 
 ## ✨ Features
 
-- 📱 **React Native** for iOS and Android
+- 📱 **React Native CLI** (not Expo) for full native access
 - 🌐 **React Native Web** for web applications
 - ⚡ **Vite** for fast web development
 - 🧭 **React Navigation** with static navigation
@@ -45,10 +47,13 @@ ReactNativeWebBoilerplate/
 - 🧪 **Jest** for testing
 - 🔥 **Fast Refresh** for development
 - 📦 **Node.js 18+** support
+- 🔄 **Full native module support** (no Expo limitations)
 
 ## 🚀 Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+
+> **Prerequisites**: This project requires the React Native CLI development environment, not Expo. Make sure you have Android Studio and/or Xcode properly configured for native development.
 
 ## Step 1: Start the Development Server
 
@@ -189,6 +194,7 @@ If you're having issues getting the above steps to work, see the [Troubleshootin
 - **Port Already in Use**: If port 5173 is occupied, Vite will automatically use the next available port
 - **Component Compatibility**: Not all React Native components are supported on web. Check the [React Native Web compatibility guide](https://necolas.github.io/react-native-web/docs/compatibility/)
 - **Build Issues**: Ensure TypeScript compilation passes before building for web
+- **Native Module Issues**: Remember this is a React Native CLI project, not Expo. Native modules require proper linking and may need platform-specific configuration
 
 ## 📚 Learn More
 
