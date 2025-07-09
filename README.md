@@ -188,7 +188,7 @@ If you're having issues getting the above steps to work, see the [Troubleshootin
 
 - **Dependencies Error**: Make sure all dependencies are installed with `npm install`
 - **Port Already in Use**: If port 5173 is occupied, Vite will automatically use the next available port
-- **Component Compatibility**: Not all React Native components are supported on web. Check the [React Native Web compatibility guide](https://necolas.github.io/react-native-web/docs/typescript-support/)
+- **Component Compatibility**: Not all React Native components are supported on web. Check the [React Native Web compatibility guide](https://necolas.github.io/react-native-web/docs/react-native-compatibility/)
 - **Build Issues**: Ensure TypeScript compilation passes before building for web
 - **Native Module Issues**: Remember this is a React Native CLI project, not Expo. Native modules require proper linking and may need platform-specific configuration
 
