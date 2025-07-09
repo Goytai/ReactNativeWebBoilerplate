@@ -1,38 +1,91 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Web Boilerplate
 
-# Getting Started
+A complete **React Native** boilerplate that runs on **iOS**, **Android**, and **Web**, bootstrapped with [`@react-native-community/cli`](https://github.com/react-native-community/cli) and configured for web using [React Native Web](https://necolas.github.io/react-native-web/) + [Vite](https://vitejs.dev/).
+
+> **Credits**:
+>
+> - This boilerplate was created following the excellent guide by [@insertish](https://gist.github.com/insertish): [React Native Web + Vite Setup Guide](https://gist.github.com/insertish/9cca9b6aa75a7cf34d050368d067ecf5)
+> - Web integration made easy thanks to [`vite-plugin-react-native-web`](https://github.com/Bram-dc/vite-plugin-react-native-web) by [@Bram-dc](https://github.com/Bram-dc)
+
+## 📁 Project Structure
+
+```
+ReactNativeWebBoilerplate/
+├── App.tsx                    # Main application component
+├── index.js                   # Entry point for mobile platforms
+├── package.json              # Dependencies and scripts
+├── web/
+│   ├── index.jsx             # Entry point for web
+│   ├── vite.config.ts        # Vite configuration
+│   └── public/               # Static assets for web
+├── android/                  # Android native code
+├── ios/                      # iOS native code
+└── __tests__/                # Test files
+```
+
+## 🛠️ Available Scripts
+
+- `npm start` - Start Metro bundler for mobile development
+- `npm run android` - Run on Android device/emulator
+- `npm run ios` - Run on iOS device/simulator
+- `npm run web` - Start web development server
+- `npm run build:web` - Build for web production
+- `npm run preview:web` - Preview web production build
+- `npm test` - Run tests
+- `npm run lint` - Run ESLint[`@react-native-community/cli`](https://github.com/react-native-community/cli) and configured for web using [React Native Web](https://necolas.github.io/react-native-web/) + [Vite](https://vitejs.dev/).
+
+## ✨ Features
+
+- 📱 **React Native** for iOS and Android
+- 🌐 **React Native Web** for web applications
+- ⚡ **Vite** for fast web development
+- 🧭 **React Navigation** with static navigation
+- 🔧 **TypeScript** pre-configured
+- 🎨 **ESLint** and **Prettier** for code quality
+- 🧪 **Jest** for testing
+- 🔥 **Fast Refresh** for development
+- 📦 **Node.js 18+** support
+
+## 🚀 Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
-## Step 1: Start Metro
+## Step 1: Start the Development Server
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Choose the appropriate development server for your target platform:
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### For Mobile Development (iOS/Android)
+
+Start **Metro**, the JavaScript build tool for React Native:
 
 ```sh
 # Using npm
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
+### For Web Development
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+Start the **Vite** development server for web:
 
-### Android
+```sh
+# Using npm
+npm run web
+```
+
+The web server will be available at `http://localhost:5173`
+
+## Step 2: Run Your Application
+
+### 📱 Android
+
+With Metro running, open a new terminal and run:
 
 ```sh
 # Using npm
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+### 🍎 iOS
 
 For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
 
@@ -53,14 +106,36 @@ For more information, please visit [CocoaPods Getting Started guide](https://gui
 ```sh
 # Using npm
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### 🌐 Web
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+To run the web version of your application:
+
+```sh
+# Using npm
+npm run web
+```
+
+The application will be available at `http://localhost:5173`
+
+### 🏗️ Build for Production (Web)
+
+To create a production build for web:
+
+```sh
+# Using npm
+npm run build:web
+```
+
+To preview the production build:
+
+```sh
+# Using npm
+npm run preview:web
+```
+
+If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, your connected device, or in your web browser.
 
 ## Step 3: Modify your app
 
@@ -73,25 +148,81 @@ When you want to forcefully reload, for example to reset the state of your app, 
 - **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
 - **iOS**: Press <kbd>R</kbd> in iOS Simulator.
 
-## Congratulations! :tada:
+### Force Reload
 
-You've successfully run and modified your React Native App. :partying_face:
+When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
 
-### Now what?
+- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
+- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+- **Web**: Use <kbd>Ctrl</kbd> + <kbd>R</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> (macOS) to reload in the browser, or use browser dev tools.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## Congratulations! 🎉
 
-# Troubleshooting
+You've successfully run and modified your React Native Web Boilerplate! 🚀
+
+### What's Next?
+
+- If you want to add this React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [documentation](https://reactnative.dev/docs/getting-started).
+- To learn more about React Native Web, visit the [official documentation](https://necolas.github.io/react-native-web/).
+
+## 🔧 Tech Stack
+
+This boilerplate includes:
+
+- **React Native 0.80.1** - Mobile app framework
+- **React Native Web 0.20.0** - Run React Native components in browsers
+- **React Navigation 7.x** - Navigation library with static navigation
+- **Vite 7.x** - Fast build tool for web development
+- **vite-plugin-react-native-web** - Seamless React Native Web integration with Vite
+- **TypeScript 5.x** - Static type checking
+- **Jest** - JavaScript testing framework
+- **ESLint & Prettier** - Code quality and formatting
+
+## 🔧 Troubleshooting
 
 If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
+### Common Web-specific Issues
 
-To learn more about React Native, take a look at the following resources:
+- **Dependencies Error**: Make sure all dependencies are installed with `npm install`
+- **Port Already in Use**: If port 5173 is occupied, Vite will automatically use the next available port
+- **Component Compatibility**: Not all React Native components are supported on web. Check the [React Native Web compatibility guide](https://necolas.github.io/react-native-web/docs/compatibility/)
+- **Build Issues**: Ensure TypeScript compilation passes before building for web
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 📚 Learn More
+
+To learn more about React Native and the technologies used in this boilerplate:
+
+### React Native
+
+- [React Native Website](https://reactnative.dev) - Learn more about React Native
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - **Overview** of React Native and environment setup
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - **Guided tour** of React Native **fundamentals**
+- [Blog](https://reactnative.dev/blog) - Latest official React Native **blog posts**
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - Open source GitHub **repository**
+
+### React Native Web
+
+- [React Native Web](https://necolas.github.io/react-native-web/) - Official documentation
+- [Compatibility Guide](https://necolas.github.io/react-native-web/docs/compatibility/) - Supported components and APIs
+- [Styling Guide](https://necolas.github.io/react-native-web/docs/styling/) - How to style components for web
+
+### Vite
+
+- [Vite Documentation](https://vitejs.dev/) - Fast build tool for web development
+- [Configuration Guide](https://vitejs.dev/config/) - Vite configuration options
+- [vite-plugin-react-native-web](https://github.com/Bram-dc/vite-plugin-react-native-web) - Plugin that enables React Native Web with Vite
+
+### React Navigation
+
+- [React Navigation](https://reactnavigation.org/) - Navigation library for React Native
+- [Static Navigation](https://reactnavigation.org/docs/static-navigation/) - Type-safe navigation configuration
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues and pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License.
