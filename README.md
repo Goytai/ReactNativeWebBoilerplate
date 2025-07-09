@@ -2,6 +2,8 @@
 
 A complete **React Native** boilerplate that runs on **iOS**, **Android**, and **Web**, bootstrapped with [`@react-native-community/cli`](https://github.com/react-native-community/cli) and configured for web using [React Native Web](https://necolas.github.io/react-native-web/) + [Vite](https://vitejs.dev/).
 
+> **⚠️ Important**: This boilerplate is currently in development and not yet in its final version. Features and configurations may change. Use with caution in production environments.
+
 > **Note**: This is a **React Native CLI** project, not an Expo project. It provides full access to native code and modules while maintaining web compatibility.
 
 > **Credits**:
